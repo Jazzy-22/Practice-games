@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado Pixel</title>
+    <link href="http://fonts.cdnfonts.com/css/sf-pixelate" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="palabras.js" defer></script>
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Ahorcado Pixel</h1>
+    </header>
+    <main>
+        <div class="game-container">
+            <canvas id="canvas" width="400" height="400"></canvas>
+            <div class="used-letters">
+                <h2>Used Letters:</h2>
+                <ul id="usedLetters"></ul>
+            </div>
+        </div>
+        <div class="word-container">
+            <h2>Word to Guess:</h2>
+            <div id="wordContainer"></div>
+        </div>
+        <button id="startButton">START</button>
+    </main>
+</body>
+</html>
