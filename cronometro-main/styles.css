@@ -1,0 +1,83 @@
+main {
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    background-color: #2c2c2c; /* Added a dark gray background color */
+}
+
+.circle {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border: 2px solid #66d9ef; /* Changed border color to a bright blue-green */
+    color: #fff;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Added a subtle box shadow */
+}
+
+.circle::before {
+    content: '';
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
+    background-color: #1d1d1d;
+    background-image: linear-gradient(to bottom, #1d1d1d, #333333); /* Added a linear gradient background */
+}
+
+.seconds-sphere {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ff69b4; /* Changed background color to a bright pink */
+    position: absolute;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    animation: rotacion 60s linear infinite;
+    animation-play-state: paused;
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); /* Added a subtle box shadow */
+}
+
+@keyframes rotacion {
+    from { transform: rotate(-90deg) translateX(60px); }
+    to { transform: rotate(270deg) translateX(60px); }
+}
+
+.buttons {
+    margin-top: 10px;
+    display: inline-flex;
+    justify-content: space-between; /* Added justification for the buttons */
+}
+
+.paused {
+    height: 10px;
+    border-width: 5px 0 5px 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-left: 15px;
+    border-color: transparent transparent transparent #66d9ef; /* Changed border color to match the circle's border */
+    transition: 100ms all ease;
+    will-change: border-width;
+    border-style: solid;
+}
+
+.running {
+    border-style: double;
+    border-width: 0 0 0 10px;
+    border-color: #33cc33; /* Changed border color to a bright green */
+}
+
+.stop {
+    background-color: #ff3737; /* Changed background color to a bright red */
+    height: 10px;
+    width: 10px;
+    cursor: pointer;
+    border-radius: 50%; /* Added a rounded corner */
+    box-shadow: 0 0 5px rgba(255, 55, 55, 0.5); /* Added a subtle box shadow */
+}
