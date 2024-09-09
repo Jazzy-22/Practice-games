@@ -1,0 +1,132 @@
+* {
+    font-family: 'Share Tech Mono', monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+#board, .boardInfo {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #34495e;
+    border: 1px solid #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 10px;
+}
+
+#start, .boardInfo {
+    font-size: 25px;
+    text-align: center;
+}
+
+#gameOver {
+    display: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e74c3c;
+    text-align: center;
+}
+
+.boardInfo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #2c3e50;
+    border: 1px solid #34495e;
+    border-radius: 10px;
+}
+
+#start {
+    background-color: #f35a69;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start:hover {
+    background-color: #e74c3c;
+}
+
+#scoreBoard {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    border: 1px solid #34495e;
+    border-radius: 10px;
+}
+
+.square {
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #2c3e50;
+}
+
+.emptySquare {
+    background-color: #6d71b5;
+}
+
+.snakeSquare {
+    background-color: #e3e773;
+    border: 1px solid #000;
+}
+
+.foodSquare {
+    background-color: #55e7e7;
+    border: 1px solid #000;
+}
+
+.wallSquare {
+    background-color: #2c3e50;
+    border: 1px solid #000;
+}
+
+.powerUpSquare {
+    background-color: #9b59b6;
+    border: 1px solid #000;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-right: 10px;
+}
+
+.highScore {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    #board, .boardInfo {
+        max-width: 300px;
+    }
+    #start {
+        padding: 5px 10px;
+    }
+    .square {
+        padding: 5px;
+    }
+}
