@@ -1,0 +1,154 @@
+:root {
+    --primary: #A5C882;
+    --secondary: #D33F49;
+    --light: #fff;
+    --dark: #000;
+    --diabled: #e7e7e7;
+    --success: #2ecc71;
+    --warning: #e67e73;
+    --error: #e74c3c;
+    --info: #3498db;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: var(--diabled);
+}
+
+*:first-letter {
+    text-transform: capitalize;
+}
+
+.roundBorder {
+    border-radius: 5px;
+}
+
+.list {
+    margin: 25px auto;
+    padding: 25px;
+    background-color: var(--light);
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateRight {
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 50px;
+    color: var(--primary);
+}
+
+#dateText {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--secondary);
+}
+
+#dateMonth,
+#dateNumber,
+#dateText  {
+    font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+    font-size: 20px;
+    color: var(--dark);
+}
+
+form {
+    margin: 20px 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto 35px auto;
+    grid-column-gap: 15px;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    background-color: var(--diabled);
+    border-bottom: 1px solid var(--dark);
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 1px solid var(--primary);
+}
+
+.addTaskButton,
+.orderButton {
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addTaskButton {
+    height: 35px;
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.orderButton {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.task {
+    background-color: var(--primary);
+    padding: 15px;
+    margin-top: 15px;
+    color: var(--light);
+    cursor: pointer;
+    border-left: 5px solid var(--success);
+}
+
+.done {
+    background-color: var(--diabled);
+    text-decoration: line-through;
+    color: var(--dark);
+    border-left: 5px solid var(--error);
+}
+
+.success-message {
+    background-color: var(--success);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.error-message {
+    background-color: var(--error);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.warning-message {
+    background-color: var(--warning);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.info-message {
+    background-color: var(--info);
+    color: var(--light);
+    padding: 10px;
+    border-radius: 5px;
+}
